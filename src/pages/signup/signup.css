@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.outer-box {
+    border: 2px solid #dadce0;
+    /* Code Change */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* Code Change */
+    border-radius: 10px;
+    width: 50vw;
+    height: 90vh;
+    margin: auto;
+    margin-top: 10px;
+    padding: 48px 40px 36px 40px;
+    display: flex;
+}
+
+.inner-box {
+    /* border: 2px solid blue; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    /* The following code is updated  */
+    margin: 0;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.header h1 {
+    font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+    color: #202124;
+    text-align: left;
+    direction: ltr;
+    color-scheme: light;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.3333;
+    margin: 0;
+    padding-top: 16px;
+    word-break: break-word;
+    text-align: left;
+}
+
+.form-content {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 14px;
+    padding: 24px 0 0;
+    vertical-align: top;
+    white-space: normal;
+}
+
+.full-name {
+    display: flex;
+    flex-direction: row;
+}
+
+.first-name {
+    margin: 0;
+}
+
+.last-name {
+    margin-left: 4px;
+}
+
+.message {
+    color: #5f6368;
+    font-size: 12px;
+    white-space: normal;
+    direction: ltr;
+    font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+    color-scheme: light;
+    line-height: 1.4286;
+    box-sizing: inherit;
+}
+
+
+.current-email {
+    box-sizing: inherit;
+    padding: 6px 0;
+    height: 48px;
+    position: relative;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: .875rem;
+    letter-spacing: .0107142857em;
+    font-weight: 500;
+    text-transform: none;
+}
+
+.password-heading {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+}
+
+.password {
+    display: flex;
+    flex-direction: row;
+}
+
+.original-password {
+    margin: 0;
+}
+
+.confirm-password {
+    margin-left: 4px;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.figcaption {
+    text-align: center;
+    font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+    color-scheme: light;
+    direction: ltr;
+    font-size: 14px;
+    line-height: 1.4286;
+}
+
+.emailid {
+    padding-top: 24px;
+}
+
+.textbutton span {
+    position: relative;
+    box-sizing: inherit;
+    color: #174ea6;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: .875rem;
+    letter-spacing: .0107142857em;
+    font-weight: 550;
+    text-transform: none;
+    text-align: left;
+    direction: ltr;
+    color-scheme: light;
+    opacity: 0.67;
+}
+
+.textbutton span:hover {
+    color: #092f6b;
+}
+
