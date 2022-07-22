@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/* Styling for the outer box */
+.signin-outer-box {
+    border: 2px solid #9e9e9ea3;
+    border-radius: 10px;
+    height: auto;
+    min-height: 550px;
+    padding: 48px 40px 36px;
+    line-height: 20px;
+    width: 30%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+/* Styling for inner signin box */
+.signin-inner-box {
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+}
+
+/* Styling the logo */
+.signin-logo {
+    display: flex;
+    height: 24px;
+    justify-content: center;
+}
+
+/* Styling the Heading  */
+.signin-heading h1 {
+    color: #202124;
+    font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3333;
+    word-break: break-word;
+    text-align: center;
+}
+
+/* Styling the Sub Heading */
+.signin-subheading h2 {
+    color: #202124;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    line-height: 1.5;
+}
+
+/* Stylig the sign in mail */
+.signin-email {
+    margin-bottom: 14px;
+}
+
+/* Sytling for the forget mail */
+
+
+.forget-mail h3 {
+    position: relative;
+    box-sizing: inherit;
+    color: #174ea6;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: .875rem;
+    letter-spacing: .0107142857em;
+    font-weight: 550;
+    text-transform: none;
+    text-align: left;
+    direction: ltr;
+    color-scheme: light;
+    opacity: 0.67;
+}
+
+.signin-text {
+    padding-bottom: 3px;
+    padding-top: 9px;
+}
+
+.signin-text span {
+    color: #5f6368;
+    font-family: "Noto Sans Myanmar UI", arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4286;
+}
+
+.signin-learnmore {
+    display: flex;
+    padding-bottom: 3px;
+    padding-top: 9px;
+}
+
+.signin-learnmore a {
+    text-decoration: none;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    color: #1a73e8;
+    font-weight: 550;
+}
+
+.h4 {
+
+    color: #1a73e8;
+    font-family: "Noto Sans Myanmar UI", arial, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    outline: 0;
+    position: relative;
+}
+
+.signin-create-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.create-account button {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: .875rem;
+    letter-spacing: .0107142857em;
+    font-weight: 550;
+    text-transform: none;
+}
+
+.login Button span{
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: .875rem;
+    letter-spacing: .0107142857em;
+    font-weight: 500;
+    text-transform: none;
+}
