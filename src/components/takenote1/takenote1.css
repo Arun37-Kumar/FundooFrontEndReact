@@ -1,0 +1,35 @@
+.note1-Outline {
+    box-sizing: border-box;
+    width: 100vw;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    padding-top: 12px;
+    letter-spacing: .01428571em;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    min-height: 46px;
+    padding: 4px 16px 12px 16px;
+}
+
+.note1-inner-box {
+    display: flex;
+    width: 600px;
+    height: 48px;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+}
+
+
+
+.note1-input {
+    margin-left: 12px;
+}
