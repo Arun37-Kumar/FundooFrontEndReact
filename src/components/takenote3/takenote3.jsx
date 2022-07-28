@@ -10,7 +10,6 @@ import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import Tooltip from '@mui/material/Tooltip';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
-import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 
 function Takenote3() {
     return (

@@ -11,15 +11,15 @@ import Signup from './pages/signup/signup';
 function App() {
   return (
     <div className="App">
-      {/* <Signup/> */}
-      {/* <Signin /> */}
+      <Signup/>
+      <Signin />
       {/* <Header />
       <Takenote1 />
       <Takenote2 />
       <Takenote3 /> */}
-      <Dashboard />
-      <Takenote3 />
-      <Takenote3 />
+      {/* <Dashboard /> */}
+      {/* <Takenote3 /> */}
+      {/* <Takenote3 /> */}
     </div>
   );
 }

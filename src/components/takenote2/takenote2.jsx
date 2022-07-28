@@ -9,6 +9,7 @@ import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
 import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined';
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
+import Tooltip from '@mui/material/Tooltip';
 
 function Takenote2() {
     return (
@@ -20,9 +21,11 @@ function Takenote2() {
                     <div className='takenote2-box-1'>
 
                         <TextareaAutosize className='takenote2-input' type='text' placeholder='Title' />
-                        <IconButton id='takenote2-pinnote' aria-label="pin-note" size='small'>
-                            <PushPinOutlinedIcon />
-                        </IconButton>
+                        <Tooltip title='Pin note'>
+                            <IconButton id='takenote2-pinnote' aria-label="pin-note" size='small'>
+                                <PushPinOutlinedIcon />
+                            </IconButton>
+                        </Tooltip>
                     </div>
 
                     <div className='takenote2-box-2'>
@@ -32,30 +35,38 @@ function Takenote2() {
                     <div className='takenote2-box-3'>
 
                         <div className="icon-class">
+                            <Tooltip title='Remind me'>
+                                <IconButton className='takenote2-icon-button' aria-label="New list" size='small'>
+                                    <AddAlertOutlinedIcon className='icon' />
+                                </IconButton>
+                            </Tooltip>
+                            <Tooltip title='Add me'>
+                                <IconButton className='takenote2-icon-button' aria-label="New list" size='small'>
+                                    <PersonAddAltOutlinedIcon className='icon' />
+                                </IconButton>
+                            </Tooltip>
+                            <Tooltip title='Background Options'>
+                                <IconButton className='takenote2-icon-button' aria-label="Color popper" size='small'>
+                                    <ColorLensOutlinedIcon className='icon' />
+                                </IconButton>
+                            </Tooltip>
 
-                            <IconButton className='takenote2-icon-button' aria-label="New list" size='small'>
-                                <AddAlertOutlinedIcon className='icon' />
-                            </IconButton>
+                            <Tooltip title='Add Image'>
+                                <IconButton className='takenote2-icon-button' aria-label="Image" size='small'>
+                                    <ImageOutlinedIcon className='icon' />
+                                </IconButton>
+                            </Tooltip>
 
-                            <IconButton className='takenote2-icon-button' aria-label="New list" size='small'>
-                                <PersonAddAltOutlinedIcon className='icon' />
-                            </IconButton>   
-
-                            <IconButton className='takenote2-icon-button' aria-label="Color popper" size='small'>
-                                <ColorLensOutlinedIcon className='icon' />
-                            </IconButton>  
-
-                            <IconButton className='takenote2-icon-button' aria-label="Image" size='small'>
-                                <ImageOutlinedIcon className='icon' />
-                            </IconButton>  
-
-                            <IconButton className='takenote2-icon-button' aria-label="Archieve note" size='small'>
-                                <ArchiveOutlinedIcon className='icon' />
-                            </IconButton>  
-
-                            <IconButton className='takenote2-icon-button' aria-label="Image" size='small'>
-                                <MoreVertOutlinedIcon className='icon' />
-                            </IconButton>  
+                            <Tooltip title='Archieve'>
+                                <IconButton className='takenote2-icon-button' aria-label="Archieve note" size='small'>
+                                    <ArchiveOutlinedIcon className='icon' />
+                                </IconButton>
+                            </Tooltip>
+                            <Tooltip title='More'>
+                                <IconButton className='takenote2-icon-button' aria-label="Image" size='small'>
+                                    <MoreVertOutlinedIcon className='icon' />
+                                </IconButton>
+                            </Tooltip>
 
                         </div>
 
