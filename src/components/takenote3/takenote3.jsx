@@ -11,7 +11,7 @@ import Tooltip from '@mui/material/Tooltip';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
 
-function Takenote3() {
+function Takenote3(props) {
     return (
         <>
             <div className="takenote3-outer-box">
@@ -25,7 +25,7 @@ function Takenote3() {
                     <div className="takenote3-box1">
 
                         <div role="textbox" title='title' className='takenote3-title'>
-                            Title
+                            {props.note.title}
                         </div>
 
                         <div className="takenote3-pin">
@@ -39,7 +39,7 @@ function Takenote3() {
                 </div>
 
                 <div title="body" className="takenote3-box2">
-                    Description
+                    {props.note.description}
                 </div>
 
                 <div className="takenote3-box3">

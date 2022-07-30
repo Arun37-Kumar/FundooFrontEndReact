@@ -130,3 +130,47 @@
     font-weight: 500;
     text-transform: none;
 }
+
+@media screen and (min-width:320px) and (max-width: 485px) {
+
+    .signin-outer-box{
+        width: 100%;
+    }
+
+    .signin-inner-box {
+        width: 100%;
+        height: 100%;
+        padding: 24px 24px 36px;
+        border: none;
+        /* background-color: #1a73e8; */
+    }
+
+}
+
+@media screen and (min-width: 425px) and (max-width: 474px) {
+
+    .signin-outer-box{
+        width: 100%;
+    }
+    .signin-inner-box {
+        width: 100%;
+        height: 100%;
+        padding: 48px 40px 36px;
+        border: none;
+        /* background-color: yellow; */
+    }
+
+}
+
+@media screen and (min-width : 759px) and (max-width: 1024px) {
+    .signin-outer-box{
+        width: 70%;
+    }
+    .signin-inner-box {
+        width: 100%;
+        height: 100%;
+        padding: 48px 40px 36px;
+        border: none;
+        /* background-color: yellow; */
+    }
+}

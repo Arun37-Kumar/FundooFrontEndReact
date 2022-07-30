@@ -4,6 +4,9 @@ import logo from '../../assets/logo.PNG';
 import { TextField } from '@mui/material';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
+import { signIn } from '../../services/userservice';
+
+
 // Regex definition
 const emailRegex = /^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$/
 const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$/;
@@ -23,7 +26,6 @@ function Signin() {
   };
 
   const submit = () => {
-    // console.log("Done Submit");
     let emailTest = emailRegex.test(signinObj.email);
     let passwordTest = passwordRegex.test(signinObj.password);
 
@@ -42,7 +44,10 @@ function Signin() {
     }
 
     if (emailTest === true && passwordTest === true) {
-        console.log("Signin Successfull")
+      signIn(signinObj).then((response) => {
+        console.log(response)
+        localStorage.setItem('token',response.data.token)
+    }).catch((error) => {console.log(error)})
     }
 
 

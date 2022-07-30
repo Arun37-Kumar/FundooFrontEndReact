@@ -7,12 +7,15 @@ import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
 import InputBase from '@mui/material/InputBase';
 import { Tooltip } from '@mui/material';
 
-function Takenote1() {
+function Takenote1(props) {
+    const switchToNote2 = () => {
+       props.listenToHeader();
+    }
     return (
         <>
             <div className='note1-Outline'>
 
-                <div className="note1-inner-box">
+                <div onClick={switchToNote2} className="note1-inner-box">
 
                     <InputBase className='note1-input' placeholder="Take a note..." fullWidth />
 

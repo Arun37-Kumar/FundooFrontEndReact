@@ -6,20 +6,21 @@ import Takenote3 from './components/takenote3/takenote3';
 import Dashboard from './pages/Dashboard/dashboard';
 import Signin from './pages/signin/signin';
 import Signup from './pages/signup/signup';
+import React from 'react';
 
 
 function App() {
+  const [noteSwitch,setNoteSwitch] = React.useState(false);
   return (
     <div className="App">
-      <Signup/>
+      {/* <Signup/> */}
       <Signin />
-      {/* <Header />
-      <Takenote1 />
-      <Takenote2 />
-      <Takenote3 /> */}
+      {/* <Takenote1 /> */}
+      {/* <Takenote2 /> */}
       {/* <Dashboard /> */}
-      {/* <Takenote3 /> */}
-      {/* <Takenote3 /> */}
+      {/* <Takenote3 />  */}
+      {/* <Header /> */}
+      {/* {     noteSwitch ? <Takenote2/> : <Takenote1/> } */}
     </div>
   );
 }

@@ -7,6 +7,7 @@ import TextField from '@mui/material/TextField';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { useState } from 'react';
+import { signUp } from '../../services/userservice';
 
 const firstNameRegex = /[A-Z]{1}[a-z]{2,}/;
 const lastNameRegex = /[A-Z]{1}[a-z]{2,}/;
@@ -20,7 +21,6 @@ function Signup() {
         lastName: "",
         email: "",
         password: "",
-        confirmPassword: "",
     })
 
     const [signUpRegexObj, setSignUpRegexObj] = useState({
@@ -62,7 +62,7 @@ function Signup() {
         let lastNameTest = lastNameRegex.test(signUpObj.lastName)
         let emailTest = emailRegex.test(signUpObj.email)
         let passwordTest = passwordRegex.test(signUpObj.password)
-        let confirmPassword = passwordRegex.test(signUpObj.confirmPassword)
+        // let confirmPassword = passwordRegex.test(signUpObj.confirmPassword)
 
         if (firstNameTest === true) {
             setSignUpRegexObj((prevState) => ({ ...prevState, firstNameBorder: false, firstNameHelper: "" }))
@@ -97,7 +97,7 @@ function Signup() {
             else if (signUpObj.confirmPassword !== signUpObj.password) {
                 setSignUpRegexObj((prevState) => ({
                     ...prevState, passwordBorder: true,
-                    passwordHelper: "Those passwords didn’t match. Try again."
+                    passwordHelper: "Passwords didn’t match. Try again."
                 }))
             }
         }
@@ -108,9 +108,9 @@ function Signup() {
         if (firstNameTest === true && lastNameTest === true && emailTest === true && passwordTest === true &&
             signUpObj.confirmPassword === signUpObj.password) {
 
-            console.log("Signup Successfull!")
-            alert("Signup Successfull!")
-
+                signUp(signUpObj).then((response) => {
+                    console.log(response)
+                }).catch((error) => {console.log(error)})
         }
 
 
