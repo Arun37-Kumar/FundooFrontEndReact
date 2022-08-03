@@ -14,13 +14,13 @@ function App() {
   return (
     <div className="App">
       {/* <Signup/> */}
-      <Signin />
+      {/* <Signin /> */}
       {/* <Takenote1 /> */}
       {/* <Takenote2 /> */}
-      {/* <Dashboard /> */}
       {/* <Takenote3 />  */}
       {/* <Header /> */}
-      {/* {     noteSwitch ? <Takenote2/> : <Takenote1/> } */}
+      {/* {  noteSwitch ? <Takenote2/> : <Takenote1/> } */}
+      <Dashboard />
     </div>
   );
 }

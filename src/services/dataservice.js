@@ -17,4 +17,16 @@ export const getNotes = () => {
   return response;
 }
 
+export const updateColor = (colorObj) => {
+  let response = axios.post('https://localhost:44376/api/Notes/ChangeColor',colorObj,configObj);
+  return response;
+}
+
+export const archieveNote = (id) => {
+  console.log(id);
+  console.log(configObj)
+  let response = axios.post(`https://localhost:44376/api/Notes/ArchievedNotes?noteId=${id}`,null,configObj);
+  return response;
+}
+
 

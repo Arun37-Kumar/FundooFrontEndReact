@@ -11,9 +11,14 @@ import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import Tooltip from '@mui/material/Tooltip';
 import { createNote } from '../../services/dataservice';
+import ColorPopper from '../colorpopper/colorpopper';
 
-function Takenote2() {
-    const [noteObj,setNoteObj] = React.useState({Title : "", Description : "",Reminder : "",Colour : "",Image : "",Archieve : false, Trash : false, Pinned : false});
+function Takenote2(props) {
+    const [noteObj, setNoteObj] = React.useState({ Title: "", Description: "", Reminder: "", Colour: "", Image: "", Archieve: false, Trash: false, Pinned: false });
+
+    const takeArchieve = (event) => {
+        setNoteObj((prevState) => ({ ...prevState, Archieve: !event.target.Archieve }));
+    }
 
     const takeTitle = (event) => {
         setNoteObj((prevState) => ({ ...prevState, Title: event.target.value }));
@@ -23,21 +28,27 @@ function Takenote2() {
         setNoteObj((prevState) => ({ ...prevState, Description: event.target.value }));
     }
 
+    const listenToPopper = (color) => {
+        setNoteObj((prevState) => ({ ...prevState, Colour: color }));
+    }
+
     const submitClose = () => {
         createNote(noteObj).then((response) => {
             console.log(response)
-        }).catch((error) => {console.log(error)})
+        }).catch((error) => { console.log(error) })
     }
+
+
 
     return (
         <>
-            <div className="note2-outerbox">
+            <div onClick={props.listenToHeaderNote1} className="note2-outerbox">
 
-                <div className="note2-innerbox">
+                <div style={{ backgroundColor: noteObj.Colour }} className="note2-innerbox">
 
-                    <div className='takenote2-box-1'>
+                    <div style={{ backgroundColor: noteObj.Colour }} className='takenote2-box-1'>
 
-                        <TextareaAutosize onChange={takeTitle} className='takenote2-input' type='text' placeholder='Title' />
+                        <TextareaAutosize style={{ backgroundColor: noteObj.Colour }} onChange={takeTitle} className='takenote2-input' type='text' placeholder='Title' />
                         <Tooltip title='Pin note'>
                             <IconButton id='takenote2-pinnote' aria-label="pin-note" size='small'>
                                 <PushPinOutlinedIcon />
@@ -45,11 +56,11 @@ function Takenote2() {
                         </Tooltip>
                     </div>
 
-                    <div className='takenote2-box-2'>
-                        <TextareaAutosize onChange={takeNote} className='takenote2-input' type='text' placeholder='Take a note...' />
+                    <div style={{ backgroundColor: noteObj.Colour }} className='takenote2-box-2'>
+                        <TextareaAutosize style={{ backgroundColor: noteObj.Colour }} onChange={takeNote} className='takenote2-input' type='text' placeholder='Take a note...' />
                     </div>
 
-                    <div className='takenote2-box-3'>
+                    <div style={{ backgroundColor: noteObj.Colour }} className='takenote2-box-3'>
 
                         <div className="icon-class">
                             <Tooltip title='Remind me'>
@@ -62,11 +73,12 @@ function Takenote2() {
                                     <PersonAddAltOutlinedIcon className='icon' />
                                 </IconButton>
                             </Tooltip>
-                            <Tooltip title='Background Options'>
-                                <IconButton className='takenote2-icon-button' aria-label="Color popper" size='small'>
-                                    <ColorLensOutlinedIcon className='icon' />
-                                </IconButton>
-                            </Tooltip>
+
+
+                            <IconButton className='takenote2-icon-button' aria-label="Color popper" size='small'>
+                                <ColorPopper action='create' listenToPopper={listenToPopper} />
+                            </IconButton>
+
 
                             <Tooltip title='Add Image'>
                                 <IconButton className='takenote2-icon-button' aria-label="Image" size='small'>
@@ -75,7 +87,7 @@ function Takenote2() {
                             </Tooltip>
 
                             <Tooltip title='Archieve'>
-                                <IconButton className='takenote2-icon-button' aria-label="Archieve note" size='small'>
+                                <IconButton onClick={takeArchieve} className='takenote2-icon-button' aria-label="Archieve note" size='small'>
                                     <ArchiveOutlinedIcon className='icon' />
                                 </IconButton>
                             </Tooltip>

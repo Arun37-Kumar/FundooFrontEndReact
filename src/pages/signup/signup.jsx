@@ -171,7 +171,7 @@ function Signup() {
                                     </div>
                                     {/* 3.4.2 - Confirm Password */}
                                     <div className="confirm-password">
-                                        <TextField onChange={getConfirmPassword} error={signUpRegexObj.confirmPasswordBorder} helperText={signUpRegexObj.confirmPasswordHelper} id="outlined-basic" size='small' label="Confirm Password" variant="outlined" />
+                                        <TextField onChange={getConfirmPassword} error={signUpRegexObj.confirmPasswordBorder} helperText={signUpRegexObj.confirmPasswordHelper} id="outlined-basic" size='small' label="Confirm Password" variant="outlined"/>
                                     </div>
                                 </div>
                                 {/* 3.4.2 - Message to show */}

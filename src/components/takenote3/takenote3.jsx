@@ -10,11 +10,19 @@ import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import Tooltip from '@mui/material/Tooltip';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
+import ColorPopper from '../colorpopper/colorpopper';
+import { archieveNote } from '../../services/dataservice';
 
 function Takenote3(props) {
+
+    const takeArchieve = () =>{
+        archieveNote(props.note.notesId)
+        .then((res) => console.log(res))
+        .catch((error) => console.log(error))
+    }
     return (
         <>
-            <div className="takenote3-outer-box">
+            <div style={{backgroundColor:props.note.colour}} className="takenote3-outer-box">
 
                 <Tooltip title="Select note">
                     <CheckCircleRoundedIcon id='note3_select-note' />
@@ -56,11 +64,11 @@ function Takenote3(props) {
                         </IconButton>
                     </Tooltip>
 
-                    <Tooltip title='Color Popper'>
+        
                         <IconButton className='takenote3_icon-button' aria-label="New list" size='small'>
-                            <ColorLensOutlinedIcon className='icon' />
+                           <ColorPopper action='update' id={props.note.notesId} className='icon'/>
                         </IconButton>
-                    </Tooltip>
+  
 
                     <Tooltip title='Add image'>
                         <IconButton className='takenote3_icon-button' aria-label="New list" size='small'>
@@ -69,8 +77,8 @@ function Takenote3(props) {
                     </Tooltip>
 
                     <Tooltip title='Archive'>
-                        <IconButton className='takenote3_icon-button' aria-label="New list" size='small'>
-                            <ArchiveOutlinedIcon className='icon' />
+                        <IconButton  className='takenote3_icon-button' aria-label="New list" size='small'>
+                            <ArchiveOutlinedIcon onClick={takeArchieve} className='icon' />
                         </IconButton>
                     </Tooltip>
 

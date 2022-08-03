@@ -12,7 +12,7 @@ import AppsRoundedIcon from '@mui/icons-material/AppsRounded';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import MenuIcon from '@mui/icons-material/Menu';
 
-function Header() {
+function Header(props) {
     return (
         <>
             <div className="header-outer-box">
@@ -20,7 +20,7 @@ function Header() {
 
                     {/* 1 - App Logo and name */}
                     <div className='box-1'>
-                        <IconButton className='nav-button' id='menu' aria-label="main-menu" size="large">
+                        <IconButton onClick={props.listenToHeaderMenu} className='nav-button' id='menu' aria-label="main-menu" size="large">
                             <MenuIcon />
                         </IconButton>
                         <img src={logo} alt="Keep" />
@@ -32,7 +32,7 @@ function Header() {
                         <IconButton id='search' aria-label="search" size="large">
                             <SearchIcon />
                         </IconButton>
-
+                        
                         <InputBase className='input-base' id='search-input' placeholder="Search" type='text' />
 
                         <IconButton className='clear-button' id='clear' aria-label="clear-search" size="large">
