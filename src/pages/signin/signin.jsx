@@ -5,6 +5,7 @@ import { TextField } from '@mui/material';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
 import { signIn } from '../../services/userservice';
+import { useHistory, useNavigate } from "react-router-dom";
 
 
 // Regex definition
@@ -13,6 +14,7 @@ const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).
 
 function Signin() {
   const [signinObj, setSigninObj] = useState({ email: "", password: "" })
+  const navigate = useNavigate();
   const [regexObj, setRegexObj] = React.useState({ emailError: false, passwordError: false, emailHelper: "", passwordHelper: "" });
 
   const getEmail = (event) => {
@@ -46,6 +48,7 @@ function Signin() {
     if (emailTest === true && passwordTest === true) {
       signIn(signinObj).then((response) => {
         console.log(response)
+        navigate('/dashboard')
         localStorage.setItem('token',response.data.token)
     }).catch((error) => {console.log(error)})
     }

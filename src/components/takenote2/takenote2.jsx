@@ -41,8 +41,8 @@ function Takenote2(props) {
 
 
     return (
-        <>
-            <div onClick={props.listenToHeaderNote1} className="note2-outerbox">
+        <> 
+            <div  className="note2-outerbox">
 
                 <div style={{ backgroundColor: noteObj.Colour }} className="note2-innerbox">
 

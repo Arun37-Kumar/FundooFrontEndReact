@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard/dashboard';
 import Signin from './pages/signin/signin';
 import Signup from './pages/signup/signup';
 import React from 'react';
+import ReactRouter from './router/router';
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
       {/* <Takenote3 />  */}
       {/* <Header /> */}
       {/* {  noteSwitch ? <Takenote2/> : <Takenote1/> } */}
-      <Dashboard />
+      {/* <Dashboard /> */}
+      <ReactRouter/>
     </div>
   );
 }

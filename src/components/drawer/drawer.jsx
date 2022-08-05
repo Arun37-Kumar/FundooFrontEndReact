@@ -19,6 +19,12 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import './drawer.css'
+// ICONS
+import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
+import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import ColorizeOutlinedIcon from '@mui/icons-material/ColorizeOutlined';
+import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
+import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 
 const drawerWidth = 240;
 
@@ -125,7 +131,7 @@ export default function SideDrawer(props) {
                                     justifyContent: 'center',
                                 }}
                             >
-                                <InboxIcon />
+                                <LightbulbOutlinedIcon />
                             </ListItemIcon>
                             <ListItemText primary={'Notes'} sx={{ opacity: props.sideView ? 1 : 0 }} />
                         </ListItemButton>
@@ -146,11 +152,75 @@ export default function SideDrawer(props) {
                                     justifyContent: 'center',
                                 }}
                             >
-                                <InboxIcon />
+                                <NotificationsNoneOutlinedIcon />
                             </ListItemIcon>
-                            <ListItemText primary={'Reminder'} sx={{ opacity: props.sideView ? 1 : 0 }} />
+                            <ListItemText primary={'Reminders'} sx={{ opacity: props.sideView ? 1 : 0 }} />
                         </ListItemButton>
                     </ListItem>
+
+                    <ListItem  disablePadding sx={{ display: 'block' }}>
+                        <ListItemButton
+                            sx={{
+                                minHeight: 48,
+                                justifyContent: props.sideView ? 'initial' : 'center',
+                                px: 2.5,
+                            }}
+                        >
+                            <ListItemIcon
+                                sx={{
+                                    minWidth: 0,
+                                    mr: props.sideView ? 3 : 'auto',
+                                    justifyContent: 'center',
+                                }}
+                            >
+                                <ColorizeOutlinedIcon />
+                            </ListItemIcon>
+                            <ListItemText primary={'Edit Label'} sx={{ opacity: props.sideView ? 1 : 0 }} />
+                        </ListItemButton>
+                    </ListItem>
+
+                    <ListItem  disablePadding sx={{ display: 'block' }}>
+                        <ListItemButton
+                            sx={{
+                                minHeight: 48,
+                                justifyContent: props.sideView ? 'initial' : 'center',
+                                px: 2.5,
+                            }}
+                        >
+                            <ListItemIcon
+                                sx={{
+                                    minWidth: 0,
+                                    mr: props.sideView ? 3 : 'auto',
+                                    justifyContent: 'center',
+                                }}
+                            >
+                                <ArchiveOutlinedIcon />
+                            </ListItemIcon>
+                            <ListItemText primary={'Archieve'} sx={{ opacity: props.sideView ? 1 : 0 }} />
+                        </ListItemButton>
+                    </ListItem>
+
+                    <ListItem  disablePadding sx={{ display: 'block' }}>
+                        <ListItemButton
+                            sx={{
+                                minHeight: 48,
+                                justifyContent: props.sideView ? 'initial' : 'center',
+                                px: 2.5,
+                            }}
+                        >
+                            <ListItemIcon
+                                sx={{
+                                    minWidth: 0,
+                                    mr: props.sideView ? 3 : 'auto',
+                                    justifyContent: 'center',
+                                }}
+                            >
+                                <DeleteOutlinedIcon />
+                            </ListItemIcon>
+                            <ListItemText primary={'Trash'} sx={{ opacity: props.sideView ? 1 : 0 }} />
+                        </ListItemButton>
+                    </ListItem>
+
                 </List>
             </Drawer>
         </Box>
